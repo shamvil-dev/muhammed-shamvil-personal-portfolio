@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Shamvil | Creative Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Muhammed Shamvil - Graphic Designer, Video Editor, and Motion Graphics Artist.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Placeholder for icons, will handle with CSS/SVG if needed -->
+</head>
+
+<body>
+    <canvas id="game-canvas"></canvas>
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Shamvil<span class="accent">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#youtube" style="color:#ff0000;">YouTube</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#contact" class="btn-primary">Contact Me</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <h2 class="animate-up">Hello, I'm</h2>
+            <h1 class="animate-up delay-1">Muhammed Shamvil</h1>
+            <p class="animate-up delay-2">Graphic Designer <span class="separator">/</span> Video Editor <span
+                    class="separator">/</span> Motion Graphics Artist</p>
+            <div class="hero-buttons animate-up delay-3">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Let's Talk</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="image-wrapper">
+                <img src="hero-profile.png" alt="Muhammed Shamvil Portrait" class="hero-img">
+            </div>
+            <!-- Abstract colorful shape or image placeholder -->
+            <div class="blob"></div>
+            <div class="blob blob-2"></div>
+        </div>
+    </header>
+
+    <!-- About / Experience Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Level History</h2>
+            <p class="section-subtitle">Character Experience & Guilds</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Founder</h3>
+                        <span class="company">Petrichor Advertising Agency</span>
+                        <p>Specializing in brand visuals, video content, and motion graphics for growing businesses.
+                            End-to-end project execution.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Creative Professional</h3>
+                        <span class="company">PromoGrow</span>
+                        <p>Contributed to dynamic marketing campaigns and visual content creation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Creative Professional</h3>
+                        <span class="company">Bridco</span>
+                        <p>Delivered high-quality graphic and video assets for corporate needs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Creative Professional</h3>
+                        <span class="company">Britco</span>
+                        <p>Early career experience honing design and editing skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Section -->
+    <section id="youtube" class="section-padding dark-bg">
+        <div class="container youtube-container">
+            <div class="youtube-content">
+                <h2 class="section-title" style="text-align: left;"><i class="fab fa-youtube"
+                        style="color: #ff0000; margin-right: 15px;"></i>Shiboos Tube</h2>
+                <p class="section-subtitle" style="text-align: left; margin-bottom: 20px;">Join our growing community of
+                    active creators.</p>
+                <div class="stat-card">
+                    <h3 class="counter" data-target="61000">0</h3>
+                    <span>Subscribers</span>
+                </div>
+                <p class="yt-desc">Exploring the world of motion graphics, tutorials, and creative vlogs. Subscribe to
+                    stay updated!</p>
+                <a href="https://www.youtube.com/@shiboostube" target="_blank" class="btn-primary"
+                    style="background: #ff0000; box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);">Subscribe Now</a>
+            </div>
+            <div class="youtube-visual">
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding dark-bg">
+        <div class="container">
+            <h2 class="section-title">Character Stats</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="icon-design.jpg" alt="Graphic Design" class="skill-icon-img">
+                    <h3>Graphic Design</h3>
+                    <p>Logo Design, Branding, Marketing Materials, Social Media Posts</p>
+                    <div class="tools-grid">
+                        <i class="fab fa-adobe" title="Adobe Suite"></i>
+                        <i class="fas fa-bezier-curve" title="Vector Art"></i>
+                        <i class="fas fa-image" title="Photo Manipulation"></i>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img src="icon-video.jpg" alt="Video Editing" class="skill-icon-img">
+                    <h3>Video Editing</h3>
+                    <p>Post-production, Color Grading, Narrative Flow, Sound Design</p>
+                    <div class="tools-grid">
+                        <i class="fas fa-file-video" title="Premiere Pro"></i>
+                        <i class="fas fa-sliders-h" title="Color Grading"></i>
+                        <i class="fas fa-cut" title="Editing"></i>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img src="icon-motion.jpg" alt="Motion Graphics" class="skill-icon-img">
+                    <h3>Motion Graphics</h3>
+                    <p>2D/3D Animation, Kinetic Typography, Visual Effects</p>
+                    <div class="tools-grid">
+                        <i class="fas fa-cube" title="3D Modeling"></i>
+                        <i class="fas fa-magic" title="VFX"></i>
+                        <i class="fas fa-wind" title="Animation"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-wrapper">
+                <div class="service-row">
+                    <div class="service-number">01</div>
+                    <div class="service-detail">
+                        <h3>Brand Identity</h3>
+                        <p>Crafting unique logos and visual systems that define your brand's personality.</p>
+                    </div>
+                </div>
+                <div class="service-row">
+                    <div class="service-number">02</div>
+                    <div class="service-detail">
+                        <h3>Video Production</h3>
+                        <p>Professional editing and motion graphics to bring your footage to life.</p>
+                    </div>
+                </div>
+                <div class="service-row">
+                    <div class="service-number">03</div>
+                    <div class="service-detail">
+                        <h3>Social Media Content</h3>
+                        <p>Engaging visuals and short-form video content designed for growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding dark-bg">
+        <div class="container">
+            <h2 class="section-title">Mission Log</h2>
+            <div class="projects-grid">
+                <!-- Placeholders for projects -->
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="project-design.png" alt="Brand Overhaul">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Brand Overhaul</h3>
+                        <p>Graphic Design</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="project-video.png" alt="Product Commercial">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Product Commercial</h3>
+                        <p>Video Editing</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img-placeholder gradient-3"></div>
+                    <div class="project-info">
+                        <h3>App Explainer</h3>
+                        <p>Motion Graphics</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img-placeholder gradient-4"></div>
+                    <div class="project-info">
+                        <h3>Social Campaign</h3>
+                        <p>Advertising</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container contact-container">
+            <div class="contact-text">
+                <h2>Let's Create Something Amazing</h2>
+                <p>Have a project in mind? Reach out and let's discuss how we can bring your vision to reality.</p>
+                <div class="contact-details">
+                    <p><strong>Email:</strong> contact@shamvil.com</p> <!-- Placeholder -->
+                    <p><strong>Location:</strong> Available Remote</p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Project Details" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Muhammed Shamvil. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
