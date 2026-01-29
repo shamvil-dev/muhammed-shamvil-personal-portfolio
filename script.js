@@ -240,15 +240,35 @@ document.addEventListener('DOMContentLoaded', () => {
     videoCards.forEach(card => {
         const video = card.querySelector('video');
         if (video) {
+            const soundBtn = card.querySelector('.sound-toggle');
+            const soundIcon = soundBtn ? soundBtn.querySelector('i') : null;
+
             card.addEventListener('mouseenter', () => {
                 video.currentTime = 0; // Restart video
+                video.muted = true; // Ensure muted start
+                if (soundIcon) soundIcon.className = 'fas fa-volume-mute'; // Reset icon
                 video.play();
             });
 
             card.addEventListener('mouseleave', () => {
                 video.pause();
-                video.currentTime = 0; // Reset to start
+                // video.currentTime = 0; // Optional: Reset or keep frame
+                // Let's reset to keep it preview-like
+                video.currentTime = 0;
+                video.muted = true;
             });
+
+            if (soundBtn) {
+                soundBtn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent card click if any
+                    video.muted = !video.muted;
+                    if (video.muted) {
+                        soundIcon.className = 'fas fa-volume-mute';
+                    } else {
+                        soundIcon.className = 'fas fa-volume-up';
+                    }
+                });
+            }
         }
     });
 
