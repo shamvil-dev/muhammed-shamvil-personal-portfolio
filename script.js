@@ -96,10 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const increment = target / 200; // Speed control
                 if (count < target) {
                     count = Math.ceil(count + increment);
-                    counter.innerText = count.toLocaleString() + '+';
+                    counter.innerText = count.toLocaleString();
                     requestAnimationFrame(updateCount);
                 } else {
-                    counter.innerText = (target / 1000) + 'k+';
+                    counter.innerText = target.toLocaleString();
                 }
             };
             updateCount();
