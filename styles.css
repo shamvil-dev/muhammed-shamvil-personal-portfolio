@@ -42,8 +42,9 @@ body {
 
 /* Custom Cursor */
 .custom-cursor {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    /* Smaller cursor */
+    height: 30px;
     border: 2px solid var(--accent-cyan);
     border-radius: 50%;
     position: fixed;
@@ -69,8 +70,9 @@ body {
 a:hover~.custom-cursor,
 button:hover~.custom-cursor,
 .project-card:hover~.custom-cursor {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    /* Smaller expansion */
+    height: 60px;
     border-color: var(--accent-pink);
     background: rgba(255, 0, 80, 0.1);
 }
