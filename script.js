@@ -228,6 +228,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 8. Video Autoplay on Hover
+    const videoCards = document.querySelectorAll('.video-card');
+
+    videoCards.forEach(card => {
+        const video = card.querySelector('video');
+        if (video) {
+            card.addEventListener('mouseenter', () => {
+                video.currentTime = 0; // Restart video
+                video.play();
+            });
+
+            card.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0; // Reset to start
+            });
+        }
+    });
+
     window.addEventListener('resize', () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
