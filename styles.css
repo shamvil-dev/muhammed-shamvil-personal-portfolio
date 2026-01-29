@@ -1022,8 +1022,3 @@ footer {
     border-color: var(--accent-cyan);
     transform: scale(1.1);
 }
-
-.rotate-90 {
-    transform: rotate(90deg) scale(1.8);
-    /* Scale to cover gaps if needed */
-}
