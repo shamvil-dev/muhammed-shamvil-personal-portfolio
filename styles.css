@@ -675,8 +675,8 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://img.youtube.com/vi/placeholder/maxresdefault.jpg') center/cover;
-    opacity: 0.3;
+    background: url('project-video.png') center/cover;
+    opacity: 0.5;
 }
 
 .video-placeholder i {
