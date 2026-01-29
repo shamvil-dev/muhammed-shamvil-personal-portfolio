@@ -186,7 +186,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function init() {
         particles = [];
-        for (let i = 0; i < 100; i++) {
+        let numberOfParticles = (canvas.width * canvas.height) / 9000;
+        if (window.innerWidth < 768) {
+            numberOfParticles = 30; // Reduce for mobile
+        }
+        for (let i = 0; i < numberOfParticles; i++) {
             let x = Math.random() * canvas.width;
             let y = Math.random() * canvas.height;
             particles.push(new Particle(x, y, 0.5));
