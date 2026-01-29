@@ -853,8 +853,10 @@ footer {
 /* Animation Utility Classes for JS */
 .hidden-section {
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
+    transform: translateY(30px);
+    /* Reduced movement */
+    transition: all 0.6s ease-out;
+    /* Faster duration */
 }
 
 .hidden-section.in-view {
@@ -864,8 +866,10 @@ footer {
 
 .hidden-card {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-out;
+    transform: translateY(20px);
+    /* Reduced movement */
+    transition: all 0.4s ease-out;
+    /* Faster duration */
 }
 
 .hidden-card.in-view {

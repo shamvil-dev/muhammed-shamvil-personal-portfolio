@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Scroll Animations (Intersection Observer)
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
+        rootMargin: "0px 0px 0px 0px" // Trigger immediately when entering viewport
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     cards.forEach((card, index) => {
-        card.style.transitionDelay = `${index * 0.1}s`; // Stagger effect
+        card.style.transitionDelay = `${index * 0.05}s`; // Faster stagger effect
         card.classList.add('hidden-card');
         observer.observe(card);
     });
