@@ -131,6 +131,8 @@ ul {
 .nav-links {
     display: flex;
     gap: 40px;
+    align-items: center;
+    /* Fix alignment of button vs text */
 }
 
 .nav-links a {
