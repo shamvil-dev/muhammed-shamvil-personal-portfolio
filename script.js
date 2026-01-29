@@ -70,44 +70,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 4. Typing Effect for Hero Name
+    // 4. Typing Effect for Hero Name
     const nameElement = document.querySelector('.hero-content h1');
-    const nameText = "Muhammed Shamvil";
-    nameElement.textContent = "";
+    if (nameElement) {
+        const nameText = "Muhammed Shamvil";
+        nameElement.textContent = "";
 
-    let i = 0;
-    function typeWriter() {
-        if (i < nameText.length) {
-            nameElement.textContent += nameText.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
+        let i = 0;
+        function typeWriter() {
+            if (i < nameText.length) {
+                nameElement.textContent += nameText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
         }
+        // Start typing after a short delay
+        setTimeout(typeWriter, 1500);
     }
-    // Start typing after a short delay
-    setTimeout(typeWriter, 1500);
 
     // 5. Subscriber Counter Animation
+    // 5. Subscriber Counter Animation
     const counter = document.querySelector('.counter');
-    const target = +counter.getAttribute('data-target');
+    if (counter) {
+        const target = +counter.getAttribute('data-target');
 
-    const countObserver = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-            let count = 0;
-            const updateCount = () => {
-                const increment = target / 200; // Speed control
-                if (count < target) {
-                    count = Math.ceil(count + increment);
-                    counter.innerText = count.toLocaleString();
-                    requestAnimationFrame(updateCount);
-                } else {
-                    counter.innerText = target.toLocaleString();
-                }
-            };
-            updateCount();
-            countObserver.unobserve(counter);
-        }
-    });
+        const countObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                let count = 0;
+                const updateCount = () => {
+                    const increment = target / 200; // Speed control
+                    if (count < target) {
+                        count = Math.ceil(count + increment);
+                        counter.innerText = count.toLocaleString();
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+                updateCount();
+                countObserver.unobserve(counter);
+            }
+        });
 
-    countObserver.observe(counter);
+        countObserver.observe(counter);
+    }
 
     // 6. Custom Mouse Cursor
     const cursor = document.querySelector('.custom-cursor');
