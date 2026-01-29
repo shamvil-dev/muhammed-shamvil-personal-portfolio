@@ -487,8 +487,8 @@ ul {
 .service-number {
     font-size: 3rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.15);
-    /* More visible */
+    color: rgba(255, 255, 255, 0.5);
+    /* Higher opacity as requested */
     text-shadow: 0 0 20px rgba(0, 242, 234, 0.1);
     margin-right: 40px;
     line-height: 1;
