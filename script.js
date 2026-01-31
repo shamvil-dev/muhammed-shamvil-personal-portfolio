@@ -272,6 +272,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // 9. Rope Switch Logic
+    const ropeSwitch = document.getElementById('rope-switch');
+    const body = document.body;
+
+    // Check localStorage for saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.setAttribute('data-theme', savedTheme);
+    }
+
+    if (ropeSwitch) {
+        ropeSwitch.addEventListener('click', () => {
+            // Add animation class
+            ropeSwitch.classList.add('pull-animate');
+
+            // Remove animation class after it completes to allow re-trigger
+            setTimeout(() => {
+                ropeSwitch.classList.remove('pull-animate');
+            }, 800); // Matches CSS animation duration
+
+            // Toggle Theme Logic
+            const currentTheme = body.getAttribute('data-theme');
+            if (currentTheme === 'light') {
+                body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+
     window.addEventListener('resize', () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
