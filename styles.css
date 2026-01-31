@@ -75,7 +75,7 @@
 }
 
 [data-theme="light"] .timeline-item {
-    border-left: 2px solid rgba(0, 0, 0, 0.1);
+    border-left: none;
 }
 
 [data-theme="light"] footer {
@@ -440,7 +440,6 @@ ul {
     max-width: 800px;
     margin: 0 auto;
     position: relative;
-    border-left: 2px solid rgba(255, 255, 255, 0.1);
     padding-left: 40px;
 }
 
@@ -1123,7 +1122,7 @@ footer {
 .rope-container {
     position: fixed;
     top: 0;
-    right: 10%;
+    right: 18%;
     z-index: 2000;
     filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.3));
 }
