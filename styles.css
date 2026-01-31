@@ -1208,3 +1208,100 @@ footer {
     box-shadow: 0 0 20px #ffcc00;
     filter: drop-shadow(0 0 5px #ffcc00);
 }
+/* Custom Glassy Popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popup-content {
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    transform: scale(0.8);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 40px rgba(0, 242, 234, 0.1);
+}
+
+.popup-overlay.active .popup-content {
+    transform: scale(1);
+}
+
+.popup-icon {
+    font-size: 3rem;
+    color: var(--accent-cyan);
+    margin-bottom: 20px;
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s backwards;
+}
+
+.popup-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.popup-content p {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.popup-content button {
+    background: var(--gradient-main);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.popup-content button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(112, 0, 255, 0.4);
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+
+/* Light Mode Popup Overrides */
+[data-theme="light"] .popup-content {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .popup-content h3 {
+    color: var(--text-primary);
+}
+

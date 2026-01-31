@@ -258,10 +258,25 @@
                     <p><strong>Location:</strong> Available Remote</p>
                 </div>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Project Details" required></textarea>
+            <script>
+                var submitted = false;
+                function showPopup() {
+                    document.getElementById('success-popup').classList.add('active');
+                    document.querySelector('.contact-form').reset();
+                }
+                function closePopup() {
+                    document.getElementById('success-popup').classList.remove('active');
+                    submitted = false;
+                }
+            </script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                onload="if(submitted) { showPopup(); }"></iframe>
+            <form class="contact-form"
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLHJ6FaigTkRxC8jf7GZ33PBuC6-P3nMiR9U5FL8kjRz9z3A/formResponse"
+                method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                <input type="text" placeholder="Your Name" name="entry.927807266" required>
+                <input type="email" placeholder="Your Email" name="entry.530575050" required>
+                <textarea rows="5" placeholder="Project Details" name="entry.142821963" required></textarea>
                 <button type="submit" class="btn-primary">Send Message</button>
             </form>
         </div>
@@ -287,3 +302,14 @@
 </body>
 
 </html>
+    <!-- Custom Success Popup -->
+    <div id="success-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. I'll get back to you soon.</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
