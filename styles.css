@@ -1122,7 +1122,7 @@ footer {
 .rope-container {
     position: fixed;
     top: 0;
-    right: 18%;
+    right: 20px;
     z-index: 2000;
     filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.3));
 }
