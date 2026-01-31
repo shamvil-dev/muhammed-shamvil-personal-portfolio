@@ -81,11 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (i < nameText.length) {
                 nameElement.textContent += nameText.charAt(i);
                 i++;
-                setTimeout(typeWriter, 100);
+                setTimeout(typeWriter, 50);
             }
         }
         // Start typing after a short delay
-        setTimeout(typeWriter, 1500);
+        setTimeout(typeWriter, 500);
     }
 
     // 5. Subscriber Counter Animation
